@@ -19,8 +19,7 @@ public class 달나라토끼를위한구매대금지불도우미 {
 				}
 			}
 		}
-		System.out.println(Arrays.toString(DP));
-
+		System.out.println(DP[N]);
 	}
 
 }
