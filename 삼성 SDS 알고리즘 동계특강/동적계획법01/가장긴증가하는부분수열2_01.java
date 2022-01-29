@@ -1,5 +1,6 @@
 package 동적계획법01;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -9,18 +10,27 @@ public class 가장긴증가하는부분수열2_01 {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		int N = sc.nextInt();
-		int[] number = new int[N+1];
-		for (int i=1; i<=N; i++) number[i] = sc.nextInt();
+		int[] number = new int[N];
+		for (int i=0; i<N; i++) number[i] = sc.nextInt();
 		
-		
-		int[] DP = new int[N+1];
-		for (int a=1; a<=N; a++) {
-			for (int b=(a-1); b>=0; b--) {
-				if (number[b]<number[a]) DP[a] = Math.max(DP[a], DP[b]+1);
+		ArrayList<Integer> array = new ArrayList<Integer>();
+		array.add(Integer.MIN_VALUE);
+		for (int i=0; i<N; i++) {
+			if (array.get(array.size()-1)<number[i]) array.add(number[i]); // 그냥 추가만 하면 됨
+			else { /* 이분 탐색 검색 */
+				int left = 0, right = array.size()-1;
+				while(left<right) {
+					int mid = (left+right)/2;
+					if (array.get(mid)>=number[i]) right=mid;
+					else left = mid+1;
+					
+				}
+				System.out.println("left = "+left +" right = "+right);
+				array.set(right, number[i]);
 			}
+			System.out.println(array);
 		}
-		int maxlen = Arrays.stream(DP).max().getAsInt();
-		System.out.println(maxlen);
+		System.out.println(array.size()-1);
 
 	}
 
