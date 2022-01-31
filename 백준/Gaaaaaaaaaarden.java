@@ -54,7 +54,7 @@ public class Gaaaaaaaaaarden {
 	public static void permutation(int G, int R, String sequence ) { // 배양액 순서
 		//System.out.println("G : "+G+" R : "+R+" "+sequence);
 		if (G==0) {
-			for (int i=R; i>0; i--) sequence+="R";
+			for (int i=R; i>0; i--) sequence+="R"; 
 			nutri_permutation.add(sequence);
 			return;
 		}
