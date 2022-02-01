@@ -8,9 +8,9 @@ class 여행경로_Solution {
 	public static ArrayList<String> answer_array = new ArrayList<String>();
 	
     public String[] solution(String[][] tickets) {
-    	int[] visited = new int[tickets.length];
+    	int[] visited = new int[tickets.length]; // ticket에 대한 visited를 사용하는것도 좋은 방법이다.
     	dfs(tickets.length, "ICN",tickets,visited,"ICN");
-    	Collections.sort(answer_array);
+    	Collections.sort(answer_array); // 이렇게 String 으로 add 하고 string 정렬한 다음 split 해도 된다.
         return answer_array.get(0).split(" ");
     }
     public static void dfs(int ticketnum, String start, String[][] tickets, int[] visited, String answer) {
