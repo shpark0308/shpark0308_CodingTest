@@ -46,7 +46,6 @@ public class ≈‰∏∂≈‰_01 {
 					int nx = node.x + go_X[p];
 					int ny = node.y + go_Y[p];
 					int nz = node.z + go_Z[p];
-					System.out.println(nx+" / "+ny+" / "+nz);
 					if (nx<0||nx>=N||ny<0||ny>=M||nz<0||nz>=H) continue;
 					if (Arr[nz][nx][ny]==0) {
 						total_count-=1;
