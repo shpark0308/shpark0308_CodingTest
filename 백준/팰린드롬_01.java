@@ -17,6 +17,7 @@ public class ÆÓ¸°µå·Ò_01 {
 			boolean ischeck = true;
 			for (int a=0; a<N&&ischeck; a++) {
 				for (int b=0; b<N&&ischeck; b++) {
+					if (a==b) continue;
 					String wordsen = word[a]+word[b];
 					String[] wordarr = wordsen.split("");
 					int len = wordarr.length/2,q;

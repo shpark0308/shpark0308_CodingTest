@@ -41,7 +41,7 @@ public class 불_01 {
 	}
 	public static int solve() {
 		int time = 0;
-		while(!person.isEmpty()&&!fire.isEmpty()) { // 이 조건이 맞는지
+		while(!person.isEmpty()||!fire.isEmpty()) { // 이 조건이 맞는지
 			time++;
 			int firesize = fire.size();
 			for (int p = 0; p<firesize; p++) {

@@ -26,7 +26,7 @@ public class 전화번호목록_01 {
 			전화번호목록_01_Trie rootnode = new 전화번호목록_01_Trie();
 			int N = Integer.parseInt(br.readLine());
 			boolean flag = true;
-			for (int p=0; p<N&&flag; p++) { // number 데로
+			for (int p=0; p<N; p++) { // number 데로
 				String phonenumber = br.readLine();
 				전화번호목록_01_Trie temp = rootnode;
 				for (int k=0; k<phonenumber.length(); k++) {
