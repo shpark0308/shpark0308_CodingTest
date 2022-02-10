@@ -12,13 +12,9 @@ class 야근지수_02_Solution {
     		queue.add(num);
     		n-=1;
     	}
-    	System.out.println(queue);
     	long answer = 0;
     	int size = queue.size();
-    	for (int i=0; i<size;i++) {
-    		answer +=Math.pow(queue.poll(), 2);
-    	}
-    	System.out.println("ANSWER = "+answer);
+    	for (int i=0; i<size;i++) answer +=Math.pow(queue.poll(), 2);
         return answer;
     }
 }
