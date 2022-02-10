@@ -22,12 +22,13 @@ public class 구간합구하기_01 {
 		
 		for (int i=0; i<(M+K); i++) {
 			str = br.readLine().split(" ");
-			int op = Integer.parseInt(str[0]),a = Integer.parseInt(str[1]),b = Integer.parseInt(str[2]);
+			int op = Integer.parseInt(str[0]);
+			long a = Long.parseLong(str[1]),b = Long.parseLong(str[2]);
 			if (op==1) {
-				update(1,N, 1, a, b-number[a] );
-				number[a] = b;
+				update(1,N, 1, (int)a, b-number[(int)a] );
+				number[(int)a] = b;
 			}
-			else if (op==2) System.out.println(sum(1,N, 1, a,b));
+			else if (op==2) System.out.println(sum(1,N, 1, (int)a,(int)b));
 		}
 	}
 	/* 세그먼트 트리 구성 */

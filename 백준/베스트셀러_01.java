@@ -23,7 +23,6 @@ public class º£½ºÆ®¼¿·¯_01 {
 				maxlen = title;
 			}
 		}
-		System.out.println(hashmap);
 		System.out.println(maxlen);
 		
 		
